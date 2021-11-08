@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity{
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         MyViewModel model = new ViewModelProvider(this).get(MyViewModel.class);
-        model.getAnimals().observe(this, animals -> {
+        model.getPersons().observe(this, persons -> {
             // update UI
             // set up the RecyclerView
-            adapter = new MyRecyclerViewAdapter(this, animals);
+            adapter = new MyRecyclerViewAdapter(this, persons);
             adapter.setClickListener((view, position) -> {
                 Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
             });

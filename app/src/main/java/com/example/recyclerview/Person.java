@@ -7,6 +7,12 @@ public class Person {
     String Last;
     int age;
 
+    public Person( String First, String Last, int age) {
+        this.First = First;
+        this.Last = Last;
+        this.age = age;
+    }
+
     public String getId() {
         return id;
     }

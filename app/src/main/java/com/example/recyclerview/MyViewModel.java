@@ -32,19 +32,19 @@ public class MyViewModel extends ViewModel {
         // Do an asynchronous operation to fetch data.
     }
 
-    private MutableLiveData<ArrayList<String>> persons;
-    public LiveData<ArrayList<String>> getPersons() {
+    private MutableLiveData<ArrayList<Person>> persons;
+    public LiveData<ArrayList<Person>> getPersons() {
 
         // data to populate the RecyclerView with
-        ArrayList<String> animalNames = new ArrayList<>();
-        animalNames.add("Monkey");
-        animalNames.add("Cow");
-        animalNames.add("Jellyfish");
-        animalNames.add("Sheep");
-        animalNames.add("Goat");
+        ArrayList<Person> People = new ArrayList<>();
+        People.add(new Person( "John", "Doe", 45));
+        People.add(new Person( "Mary", "Jane", 27));
+        People.add(new Person( "Buddy", "Holly", 89));
+        People.add(new Person( "Peter", "Parker", 18));
 
-        animals.setValue(animalNames);
 
-        return animals;
+        persons.setValue(People);
+
+        return persons;
     }
 }
