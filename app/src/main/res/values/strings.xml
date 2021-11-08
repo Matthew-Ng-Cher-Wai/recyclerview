@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">recyclerview</string>
+    <string name="element_text">Here be a list.</string>
+</resources>
